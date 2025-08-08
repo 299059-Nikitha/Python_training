@@ -78,8 +78,17 @@ li2=['A','B','C']
 print(reverse_list(li2))
 
 """Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items"""
-def capitalize_list_items():
-    pass
+def capitalize_list_items(items):
+    li1= []
+    for i in items:
+        if i.islower():
+            li1.append(i.upper())
+        else:
+            li1.append(i)
+    return li1
+b = ['laxman', 'narayana', 'nikitha', 'vijayalatha', 'manju', 'pooja']
+print(capitalize_list_items(b))
+
 """Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end"""
 def add_item(li):
     li.append(5)
@@ -144,4 +153,5 @@ def sum_of_even(n):
             sum1=sum1+i
     return sum1
 n=int(input("enter the range:"))
+
 print(sum_of_even(n))
